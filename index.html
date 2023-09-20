@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conheça o Sávio</title>
+</head>
+
+<body>
+  <style>
+    @keyframes pop-btn {
+      from {
+        transform: scale(100%);
+      }
+
+      to {
+        transform: scale(125%);
+      }
+    }
+
+    :root {
+      --text: hsl(225, 89%, 93%);
+      --background: hsl(225, 85%, 8%);
+      --primary: hsl(224, 86%, 48%);
+      --secondary: hsl(225, 85%, 3%);
+      --accent: hsl(224, 86%, 55%);
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Ubuntu", sans-serif;
+      background-color: var(--background);
+      color: var(--text);
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: var(--text);
+    }
+
+    b {
+      color: var(--accent);
+    }
+
+    main {
+      margin: 50px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pfp {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .profile-image {
+      width: 300px;
+      height: 300px;
+      border-radius: 100%;
+      border-width: 10px;
+      border-color: var(--primary);
+      border-style: outset;
+      box-shadow: 0px 0px 20px var(--accent);
+    }
+
+    .upper.panel {
+      flex-direction: row;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .presentation {
+      display: flex;
+    }
+
+    .presentation::before {
+      content: "";
+      width: 5px;
+      margin-right: 10px;
+      border-radius: 10px;
+      height: inherit;
+      background-color: var(--primary);
+      box-shadow: 0px 0px 10px var(--primary);
+    }
+
+    .title {
+      margin: 5px 0px;
+    }
+
+    .title * {
+      text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+    }
+
+    .title b {
+      text-shadow: 0px 0px 15px rgba(17, 73, 228, 0.9);
+    }
+
+    .subtitle {
+      display: flex;
+    }
+
+    .subtitle h2 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .subtitle h2::after {
+      content: "";
+      width: inherit;
+      height: 3px;
+      border-radius: 10px;
+      background-color: var(--primary);
+      box-shadow: 0px 0px 10px var(--primary);
+    }
+
+    .panel {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin: 20px 0px;
+    }
+
+    .card-me {
+      background-color: var(--secondary);
+      margin: 20px;
+      padding: 50px;
+      border-radius: 10px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .side-list {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .social-img {
+      width: 40px;
+    }
+
+    .button-socials {
+      font-weight: bold;
+
+      padding: 5px 10px;
+      background-color: var(--primary);
+      border-radius: 10px;
+      box-shadow: 4px 8px 15px rgba(255, 255, 255, 0.1);
+
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .button-socials:hover {
+      background-color: var(--accent);
+      animation: pop-btn 0.1s ease-in-out forwards;
+    }
+
+    .container {
+      display: flex;
+      gap: 100px;
+      justify-content: center;
+    }
+
+    .text-list {
+      list-style: none;
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .list li {
+      text-align: center;
+    }
+
+    .list>li:first-child {
+      font-size: 24px;
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    @media (max-width: 600px) {
+
+      .upper.panel {
+        flex-direction: column;
+      }
+
+      .side-list {
+        flex-direction: column;
+      }
+
+      .container {
+        flex-direction: column;
+        gap: 50px;
+      }
+    }
+  </style>
+  <main>
+    <div class="upper panel">
+      <div class="pfp">
+        <img class="profile-image" src="/images/PfP.jpeg">
+      </div>
+      <div class="presentation">
+        <div class="title">
+          <h1><b>Sávio</b> Henrique Mendes</h1>
+          <h2>Desenvolvedor <b>Full-stack</b></h2>
+        </div>
+      </div>
+    </div>
+    <div class="card-me">
+      <ul class="text-list">
+        <li>
+          Estudante de Licenciatura em Computação na <b>UnB</b>
+        </li>
+        <li>
+          Amante de <b>Zelda</b> e jogos de <b>RPG</b>
+        </li>
+        <li>
+          Técnico em Design Gráfico pela <b>SAGA</b>
+        </li>
+      </ul>
+      <ul class="side-list">
+        <li>
+          <a class="button-socials" href="https://github.com/savio-henrique" target="_blank">
+            <img src="images/github.svg" class="social-img" />
+            <p>GitHub</p>
+          </a>
+        </li>
+        <li>
+          <a class="button-socials" href="https://www.linkedin.com/in/savio-hc/" target="_blank">
+            <img src="images/linkedin.svg" class="social-img" />
+            <p>LinkedIn</p>
+          </a>
+        </li>
+        <li>
+          <a class="button-socials" href="https://steamcommunity.com/id/Hakyoku" target="_blank">
+            <img src="images/steam.svg" class="social-img" />
+            <p>Steam</p>
+          </a>
+        </li>
+        <li>
+          <div class="button-socials">
+            <img src="images/discord.svg" class="social-img" />
+            <p>#savio0228</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="panel about-me">
+        <div class="subtitle">
+          <h2>Sobre mim 👋</h2>
+        </div>
+        <p>
+          Me chamo Sávio e sou um aspirante a Desenvolvedor <b>Full-Stack</b>,
+          atualmente estudante de Licenciatura em Computação na UnB no 5º
+          semestre, estou também me graduando em
+          <b>Tecnólogo em Análise e Desenvolvimento de Sistemas</b> na
+          Faculdade Estácio de Sá.
+          <br />
+          Sou aficionado por Design Gráfico e por Desenvolvimento, então tento
+          trazer as duas áreas à tona quando estou desenvolvendo meus
+          projetos!
+        </p>
+      </div>
+      <div class="panel likes-hobbies">
+        <div class="subtitle">
+          <h2>Gostos e Hobbies 📄</h2>
+        </div>
+        <div class="container">
+          <ul class="list text-list likes">
+            <li>Gostos 👍</li>
+            <li>The Legend of Zelda : Majora's Mask 🎮</li>
+            <li>
+              <a href="https://www.reddit.com/r/unixporn/" target="_blank">r/unixporn</a>
+            </li>
+            <li>Notion 🗓️</li>
+            <li>Beber água 🥤</li>
+          </ul>
+          <ul class="list text-list hobbies">
+            <li>Hobbies ☑️</li>
+            <li>Assistir vídeos informativos no Youtube</li>
+            <li>Fazer Academia</li>
+            <li>Codar 🖥️</li>
+          </ul>
+        </div>
+      </div>
+      <div class="panel skills">
+        <div class="subtitle">
+          <h2>Habilidades 👓</h2>
+        </div>
+        <div class="container">
+          <ul class="list text-list frontend">
+            <li>Front-End 💻</li>
+            <li>React.js</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Tailwind.css</li>
+            <li>Bootstrap</li>
+            <li>TypeScript</li>
+            <li>Next.js</li>
+          </ul>
+          <ul class="list text-list backend">
+            <li>Back-End 💬</li>
+            <li>TypeScript</li>
+            <li>Node.js</li>
+            <li>MySQL</li>
+            <li>PHP</li>
+            <li>Express</li>
+            <li>Design Patterns</li>
+            <li>TDD (aprendendo)</li>
+          </ul>
+          <ul class="list text-list toolkit">
+            <li>Ferramentas 🛠️</li>
+            <li>DBeaver</li>
+            <li>Notion</li>
+            <li>Figma</li>
+            <li>VS Code</li>
+            <li>Neovim</li>
+            <li>Bash</li>
+            <li>Linux</li>
+            <li>Trello</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
